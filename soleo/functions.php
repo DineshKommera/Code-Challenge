@@ -10,3 +10,10 @@ function soleo_files(){
 }
 
 add_action('wp_enqueue_scripts','soleo_files');
+
+function website_scripts(){
+	
+	wp_enqueue_script('js-script',get_theme_file_uri('/js/bootstrap.js'),array(),false,false);
+}
+
+add_action('wp_enqueue_scripts','website_scripts');
